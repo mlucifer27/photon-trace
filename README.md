@@ -1,6 +1,6 @@
-# Light-engine
+# PhotonTrace
 
-An inverse rasterizer engine demo, written in java using swing. The performance isn't great, due to the slowness of the java graphics library, and the fact that most of the calculations are done in the cpu, not the gpu. Still, it's a good sample implementation of the rasterization process.  
+An inverse rasterizer engine demo, written in java using swing. The performance isn't great, due to the slowness of the java graphics library, and the fact that most of the calculations are done in the cpu, not the gpu. Still, it's a good sample implementation of the rasterization process.
 
 This project is a heavily modified version of @cdehais's, @smondet's and @gmorin's rasterizer, featuring additional features such as camera movement, further optimization, and better user interface.
 
@@ -15,6 +15,7 @@ Use the `gradlew run` command to run the project.
 When starting the app, you will be prompted to select a file to load. By default, the file selector will be set to the `scenery/` directory, which contains a few sample files. You can also select a custom file from the file system, just bear in mind that any syntax errors might cause the program to crash, as very few robustness checks were made during the development (lack of time).
 
 Once loaded, a wireframe version of your scene will be displayed. The key bindings are as follows:
+
 - <kbd>arrows</kbd> - move the camera around
 - <kbd>l</kbd> - toggle lighting
 - <kbd>return</kbd> - loop between available shaders
@@ -41,9 +42,10 @@ A380 plane model rendered in solid mode, with lighting enabled.
 
 ## Importing custom models
 
-The `*.off` files available in the `app/src/main/resources/scenery` directory are modified versions of the generic [OFF file format](https://en.wikipedia.org/wiki/OFF_(file_format)). Conversion from the standard format to the modified one is done by the `off_converter.py` script, which can be found in the `app/scripts/` directory.
+The `*.off` files available in the `app/src/main/resources/scenery` directory are modified versions of the generic [OFF file format](<https://en.wikipedia.org/wiki/OFF_(file_format)>). Conversion from the standard format to the modified one is done by the `off_converter.py` script, which can be found in the `app/scripts/` directory.
 
 Usage:
+
 ```bash
 python3 app/scripts/off_converter.py <input_file> <output_file>
 ```
